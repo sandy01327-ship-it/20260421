@@ -34,7 +34,7 @@ export default function GratitudeJournal() {
     if (!inputText.trim()) return;
 
     const newEntry: JournalEntry = {
-      id: crypto.randomUUID(),
+      id: Date.now().toString() + Math.random().toString(36).substring(2),
       text: inputText.trim(),
       date: new Date().toLocaleDateString('zh-TW', {
         year: 'numeric',
